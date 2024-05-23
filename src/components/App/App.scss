@@ -6,6 +6,10 @@
   max-width: 300px;
   padding: 15px;
   width: 80vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header {
@@ -37,6 +41,11 @@
     font-weight: v.$font-weight-medium;
     padding: 10px;
     border-bottom: 1px solid v.$color-alternative;
+  }
+
+  & a {
+    text-decoration: none;
+    color: v.$color-primary;
   }
 
   & li {
