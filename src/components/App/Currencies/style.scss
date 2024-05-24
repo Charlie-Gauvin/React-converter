@@ -1,0 +1,39 @@
+@use '../../../styles/variables' as v;
+
+// on peut créer des variables locales
+$list-item-height: 3.2rem;
+
+.currencies {
+  padding-top: v.$gutter;
+
+  &-title,
+  &-item {
+    border-bottom: 1px solid v.$color-alt;
+    height: $list-item-height; // utilisation sans namespace
+    line-height: $list-item-height;
+    padding: 0 v.$gutter;
+  }
+
+  &-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  &-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &-item {
+    background-color: v.$color-light;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color v.$delay-slow linear;
+
+    &:hover {
+      // .currencies-item:hover
+      background-color: v.$color-alt;
+      transition: background-color v.$delay-fast linear;
+    }
+  }
+}

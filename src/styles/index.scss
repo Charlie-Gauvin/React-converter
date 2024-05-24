@@ -1,7 +1,34 @@
 @use 'reset';
+@use 'fonts';
 @use 'variables' as v;
+
+html {
+  font-size: 62.5%;
+  // 16px (taille par défaut du navigateur * 62.5% = 10px par défaut
+  // comme on est en relatif (%), si la taille par défaut change
+  // la valeur change aussi → accessibilité OK !
+}
 
 body {
   margin: 0;
-  font-family: 'league spartan', sans-serif;
+  font-family: v.$font-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem; // 10 * 1.6 = 16px
+  height: 100vh;
+}
+
+#root {
+  align-items: center;
+  background: v.$color-alt;
+  color: v.$color-light;
+  display: flex;
+  flex-direction: column;
+  font-family: v.$font-sans;
+  font-weight: 300;
+  gap: v.$gutter;
+  height: 100vh;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: (v.$gutter * 2) 0;
 }

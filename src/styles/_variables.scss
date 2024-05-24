@@ -1,11 +1,17 @@
-//* Color
+@use 'sass:color';
 
-$color-primary: #bb5432;
-$color-alternative: #f1c5b6;
-$color-claire: #fff;
+$color: #bb5432;
+// on peut utiliser un module natif de Sass pour « calculer »
+// des nouvelles couleurs : `sass:color`
+// astuce : avec ce principe, on peut totalement modifier le thème
+// de la page en ne modifiant qu'une seule couleur
+// https://sass-lang.com/documentation/modules/color
+$color-alt: color.scale($color, $lightness: 70%);
+$color-light: #fff;
 
-//* Taille texte
+$font-sans: 'League Spartan', sans-serif;
 
-$font-weight-light: 300; // Textes
-$font-weight-normal: 500; // liste de devises
-$font-weight-medium: 700; // titre et résultat
+$gutter: 2.4rem; // 10px * 2.4 = 24px;
+
+$delay-fast: 0.2s;
+$delay-slow: 1s;
