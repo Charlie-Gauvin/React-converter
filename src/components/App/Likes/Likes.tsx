@@ -11,7 +11,7 @@ function Likes() {
   const [likes, setLikes] = useState(0);
 
   const handleClick = () => {
-    console.log('CLICKED!');
+    // console.log('CLICKED!');
     // 3. modification du state
     setLikes((current) => current + 1);
   };

@@ -25,6 +25,13 @@ function App() {
     setIsOpen((current) => !current);
   };
 
+  // je veux un état pour afficher la devise selectionné
+  const [selectedCurrency, setSelectedCurrency] = useState(currencies[0]);
+  // console.log(selectedCurrency);
+  // Calcul du résultat de la devise selectionné
+  const resultCurrency = baseAmount * selectedCurrency.rate;
+  // console.log(resultCurrency);
+
   return (
     <>
       <div className={isOpen ? 'app is-open' : 'app'}>
