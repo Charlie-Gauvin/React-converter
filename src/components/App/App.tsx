@@ -29,7 +29,7 @@ function App() {
   const [selectedCurrency, setSelectedCurrency] = useState(currencies[0]);
   // console.log(selectedCurrency);
   // Calcul du résultat de la devise selectionné
-  const resultCurrency = baseAmount * selectedCurrency.rate;
+  // const resultCurrency = baseAmount * selectedCurrency.rate;
   // console.log(resultCurrency);
 
   return (
@@ -38,15 +38,20 @@ function App() {
         <Header
           isOpen={isOpen} // 3. diffusion vers Toggler
           toggleList={toggleList} // 4. diffuser la modification du setter
-          base={baseAmount}
-          setBaseAmount={setBaseAmount}
+          base={baseAmount} // 5. diffusion vers Input
+          setBaseAmount={setBaseAmount} // 6. diffuser la modification du setter
         />
 
         <div className="main-wrapper">
-          {isOpen && <Currencies currencies={currencies} />}
+          {isOpen && (
+            <Currencies
+              currencies={currencies}
+              setSelectedCurrency={setSelectedCurrency}
+            />
+          )}
         </div>
 
-        <Result base={baseAmount} currency={currencies[16]} />
+        <Result base={baseAmount} currency={selectedCurrency} />
       </div>
 
       <Likes />

@@ -4,12 +4,24 @@ import './style.scss';
 
 type CurrenciesProps = {
   currencies: Currency[];
+  setSelectedCurrency: (currency: Currency) => void;
 };
 
-function Currencies({ currencies }: CurrenciesProps) {
+function Currencies({ currencies, setSelectedCurrency }: CurrenciesProps) {
+  const handleClick = (currency: Currency) => {
+    setSelectedCurrency(currency);
+  };
+
   const listItems = currencies.map((currency) => (
     <li key={currency.name} className="currencies-item">
-      {currency.name}
+      <div
+        onClick={() => handleClick(currency)}
+        onKeyDown={() => handleClick(currency)}
+        role="button"
+        tabIndex={0}
+      >
+        {currency.name}
+      </div>
     </li>
   ));
 
