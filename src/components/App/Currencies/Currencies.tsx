@@ -1,5 +1,6 @@
 import { Currency } from '../../../@types';
 
+// permet de charger le style de la page
 import './style.scss';
 
 type CurrenciesProps = {
