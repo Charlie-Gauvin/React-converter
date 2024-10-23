@@ -1,10 +1,20 @@
 # Convertisseur
 
-## Objectif
-
-Réaliser ce projet
+## Aperçu du projet
 
 ![](resultat.gif)
+
+## Résumé
+
+Projet Réalise en cours de formation, visant à convertir plusieurs devises en prenant l'euro comme monnaie de référence. Ce projet a permis de travailler sur la dynamisation des différents éléments.
+<br/> Docker à également été introduit afin de faciliter le lancement du projet via un conteneur.
+
+## Technologie utilisé
+
+- React
+- Typescript
+- Sass
+- Docker
 
 ## Instructions
 
@@ -15,11 +25,14 @@ Réaliser ce projet
 - Placer des props
 - Dynamiser avec `src/data/currencies.js`
 
-## Styles
+## Charte graphique
+
+### Police
+
+- League Spartan
 
 ### Font
 
-[Spartan](https://fonts.google.com/?query=spartan)
 - `300` : textes
 - `500` : liste de devises
 - `700` : titre et résultat
@@ -29,16 +42,3 @@ Réaliser ce projet
 - Principale `#bb5432`
 - Alternative `#f1c5b6`
 - Claire `#fff`
-
-### Transitions
-
-- Rapide : `0.2s`
-- Lente : `1s`
-
-
-## Whaaat ?
-
-- https://react.dev/learn/javascript-in-jsx-with-curly-braces
-- https://react.dev/learn/passing-props-to-a-component
-- https://developer.mozilla.org/fr/docs/Web/CSS/overflow
-- https://developer.mozilla.org/fr/docs/Web/CSS/transition
